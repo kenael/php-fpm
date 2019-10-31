@@ -1,0 +1,13 @@
+kind: pipeline
+name: default
+
+steps:
+- name: docker  
+  image: plugins/docker
+  settings:
+    username: 
+      from_secret: username
+    auth:
+      from_secret: token
+    repo: kenael/php-fpm
+    tags: latest
